@@ -1,38 +1,176 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainCont {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#navbar-top {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: lightgray;
+  margin-bottom: 10px;
+}
+
+#menu {
+  width: 75%;
+  overflow: hidden;
+}
+#menuItems {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-weight: bold;
+}
+.selectInput {
+  width: 200px;
+}
+
+#enterData {
+  min-height: 500px;
+  margin: 50px;
+  background-color: lightgray;
+}
+
+.dataForm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px;
+}
+.box {
+  height: 50px;
+  display: flex;
+  margin: 5px;
+}
+
+.dataForm select {
+  height: 25px;
+  margin: 10px;
+}
+
+.dataForm input {
+  width: 100px;
+  margin: 10px;
+  border: none;
+  background-color: grey;
+  height: 35px;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
+#menuItems li,
+#menuItems button {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#results {
+  height: 600px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resultsTop {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+#resultsBottom {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dataTop {
+  width: 70%;
+  text-align: left;
+  margin: auto;
+}
+
+#resultPhoto {
+  height: 200px;
+  width: 300px;
+  background-color: azure;
+  margin: auto;
+  background-image: url(../public/sampleimage.jpg);
+  background-size: contain;
+}
+
+.resultData1 {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+table.resultsTable {
+  border: 1px solid #656565;
+  background-color: #eeeeee;
+  width: 1000px;
+  height: 30px;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.resultsTable td,
+table.resultsTable th {
+  border: 1px solid #aaaaaa;
+  padding: 3px 3px;
+}
+table.resultsTable thead {
+  background: #a4a4a4;
+  background: -moz-linear-gradient(top, #bbbbbb 0%, #adadad 66%, #a4a4a4 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #bbbbbb 0%,
+    #adadad 66%,
+    #a4a4a4 100%
+  );
+  background: linear-gradient(to bottom, #bbbbbb 0%, #adadad 66%, #a4a4a4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.resultsTable thead th {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border-left: 2px solid #f5f5f5;
+}
+table.resultsTable thead th:first-child {
+  border-left: none;
+}
+
+table.resultsTable tfoot td {
+  font-size: 14px;
+}
+table.resultsTable tfoot .links {
+  text-align: right;
+}
+table.resultsTable tfoot .links a {
+  display: inline-block;
+  background: #1c6ea4;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+#bottomLinks {
+  margin: 20px;
 }
